@@ -1,6 +1,5 @@
 #include <Arduino.h>
 #include <DigitalIO.h>
-#include <delay_cycles_avr.h>
 #include <time.h>
 
 const int ttlpulseout = 2;
