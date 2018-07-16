@@ -1,11 +1,9 @@
 #include <Arduino.h>
 #include <DigitalIO.h>
-#include <delay_cycles_avr.h>
 #include <time.h>
 
 const int ttlpulseout = 2;
 const int cam = 4;
-const int MHz = 16000000;
 int cycle;
 
 
@@ -18,10 +16,10 @@ void loop() {
   fastDigitalWrite(ttlpulseout, HIGH);
   while (cycle <= 500) {
     fastDigitalWrite(cam, HIGH);
-    _delay_cycles(0.001*MHz);
+    delayMicroseconds(1000);
     fastDigitalWrite(cam, LOW);
-    _delay_cycles(0.001*MHz);
-    Serial.print(millis());
+    delayMicroseconds(1000);
+    Serial.println(millis());
     cycle++;
   }
   fastDigitalWrite(ttlpulseout, LOW);
