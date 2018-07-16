@@ -18,9 +18,9 @@ void loop() {
   fastDigitalWrite(ttlpulseout, HIGH);
   while (cycle <= 500) {
     fastDigitalWrite(cam, HIGH);
-    _delay_cycles(1000*MHz);
+    _delay_cycles(0.001*MHz);
     fastDigitalWrite(cam, LOW);
-    _delay_cycles(1000*MHz);
+    _delay_cycles(0.001*MHz);
     Serial.print(millis());
     cycle++;
   }
