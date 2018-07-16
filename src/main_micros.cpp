@@ -6,7 +6,6 @@ const int ttlpulseout = 2;
 const int cam = 4;
 int cycle;
 
-
 void setup() {
   fastPinMode(ttlpulseout, OUTPUT);
   fastPinMode(cam, OUTPUT);
